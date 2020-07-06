@@ -1,28 +1,20 @@
 //
 //  AppDelegate.swift
-//  B24Hello
+//  B24Basics
 //
-//  Created by Oluwafemi Adenaike on 7/1/20.
+//  Created by Oluwafemi Adenaike on 7/6/20.
 //  Copyright © 2020 Oluwafemi Adenaike. All rights reserved.
 //
 
 import UIKit
 
-//class Blah {
-//  var ijk = 10
-//}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-  //lazy var b = Blah.init()
+
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
-    
-//    print(b.ijk)
-//    print(b.ijk)
-    
     return true
   }
 

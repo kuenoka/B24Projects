@@ -21,7 +21,7 @@ func fibonacci(size: Int) -> [Int] {
 
 
 let answer1 = fibonacci(size: 10)
-//print(answer1)
+print(answer1)
 
 func isItAPrimeNumber(number: Int) -> Bool {
   
@@ -30,7 +30,7 @@ func isItAPrimeNumber(number: Int) -> Bool {
   
   while checkingNumber <= number/2 && outPut == true {
     
-    if (number % checkingNumber) == 0 {
+    if (number % checkingNumber) == 0 || number < 0 {
       outPut = false
     } else {
       checkingNumber+=1
@@ -43,7 +43,7 @@ func isItAPrimeNumber(number: Int) -> Bool {
 }
 
 let answer2 = isItAPrimeNumber(number: 199)
-//print(answer2)
+print(answer2)
 
 func calculateFactorial(number: Int) -> Int {
   
