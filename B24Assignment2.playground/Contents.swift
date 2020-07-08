@@ -57,9 +57,15 @@ print("Name: \(myName), Major: \(myMajor), Credit Hours: \(myCreditHours)")
 
 struct Animal {
   
-  private var name: String = ""
-  private var numberOfLimbs: Int = 0
-  private var numberOfEyes: Int = 0
+  private var name: String
+  private var numberOfLimbs: Int
+  private var numberOfEyes: Int
+  
+  init(name: String, numberOfLimbs: Int, numberOfEyes: Int){
+    self.name = name
+    self.numberOfLimbs = numberOfLimbs
+    self.numberOfEyes = numberOfEyes
+  }
   
   func getName() -> String {
     return self.name
@@ -86,7 +92,7 @@ struct Animal {
   }
 }
 
-var animal = Animal()
+var animal = Animal(name: "Spider", numberOfLimbs: 8, numberOfEyes: 8)
 
 var name = animal.getName()
 var numberOfLimbs = animal.getNumberOfLimbs()

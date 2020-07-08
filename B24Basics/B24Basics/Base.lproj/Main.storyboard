@@ -16,11 +16,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sk6-6F-xe2">
-                                <rect key="frame" x="103" y="227" width="168" height="91"/>
+                                <rect key="frame" x="126" y="206" width="168" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open Screen"/>
                                 <connections>
                                     <segue destination="2Of-5p-hiO" kind="show" id="9lM-Oh-Iaq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4j-Gs-VfF">
+                                <rect key="frame" x="140" y="319" width="130" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Login"/>
+                                <connections>
+                                    <action selector="openLogin2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QjF-Xm-kds"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-ad-gZs">
+                                <rect key="frame" x="147" y="396" width="126" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Forget"/>
+                                <connections>
+                                    <action selector="openForget:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hOh-x5-d1g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C00-73-MtV">
+                                <rect key="frame" x="144" y="491" width="122" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="open login screen"/>
+                                <connections>
+                                    <action selector="openLogin2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZQE-3V-vmm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBc-bV-Gkg">
+                                <rect key="frame" x="194" y="641" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="btn4"/>
+                                <connections>
+                                    <action selector="doSomething4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c9S-Oc-7lr"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="some" translatesAutoresizingMaskIntoConstraints="NO" id="faj-CD-B9j">
+                                <rect key="frame" x="96" y="679" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YU6-cm-YWc">
+                                <rect key="frame" x="171" y="565" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="btn3"/>
+                                <connections>
+                                    <action selector="doSomethin3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uBN-TG-2vM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,21 +77,86 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="92.410714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller2-->
         <scene sceneID="CGS-yK-UQM">
             <objects>
-                <viewController id="2Of-5p-hiO" sceneMemberID="viewController">
+                <viewController id="2Of-5p-hiO" customClass="ViewController2" customModule="B24Basics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J90-wK-bPf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7qN-rh-T3S">
+                                <rect key="frame" x="133" y="88" width="131" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mySegmentedControl:" destination="2Of-5p-hiO" eventType="valueChanged" id="lx8-HW-4wi"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4kW-wh-Ypd">
+                                <rect key="frame" x="148" y="136" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="mySlider:" destination="2Of-5p-hiO" eventType="valueChanged" id="QXQ-9m-aZj"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ns2-oF-QWH">
+                                <rect key="frame" x="184" y="187" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="mySwitch:" destination="2Of-5p-hiO" eventType="valueChanged" id="800-bi-FIj"/>
+                                </connections>
+                            </switch>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KIK-Fh-sNN">
+                                <rect key="frame" x="172" y="251" width="71" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HyI-3B-WQi">
+                                <rect key="frame" x="133" y="308" width="150" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FD5-ah-qHj">
+                                <rect key="frame" x="188" y="339" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="myPageControl:" destination="2Of-5p-hiO" eventType="valueChanged" id="vLz-VK-MjE"/>
+                                </connections>
+                            </pageControl>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Xro-X5-5gK">
+                                <rect key="frame" x="160" y="396" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="myStepper:" destination="2Of-5p-hiO" eventType="valueChanged" id="LLh-yL-osJ"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQL-Ml-LDG">
+                                <rect key="frame" x="21" y="473" width="374" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="tj8-WW-64d"/>
                     </view>
                     <navigationItem key="navigationItem" id="cvA-aI-6K9"/>
+                    <connections>
+                        <outlet property="MyActivityIndicator" destination="KIK-Fh-sNN" id="jf8-a8-Tws"/>
+                        <outlet property="myLabel" destination="ZQL-Ml-LDG" id="bjq-qH-Rxx"/>
+                        <outlet property="myProgress" destination="HyI-3B-WQi" id="zHF-JV-6aN"/>
+                        <outlet property="mySegOutlet" destination="7qN-rh-T3S" id="JdN-sj-zGM"/>
+                        <outlet property="mySlideOutlet" destination="4kW-wh-Ypd" id="ZDf-eT-2hC"/>
+                        <outlet property="myStepOutlet" destination="Xro-X5-5gK" id="wck-w8-9Ea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eC6-kV-Ma2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010" y="95"/>
+            <point key="canvasLocation" x="2008.6956521739132" y="94.419642857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9dQ-nC-sb0">
@@ -68,4 +177,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="some" width="326" height="183.5"/>
+    </resources>
 </document>

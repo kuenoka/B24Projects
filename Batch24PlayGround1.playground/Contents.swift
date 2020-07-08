@@ -692,4 +692,32 @@ default:
     print("Some other color")
 }
 
-let pole: String
+//let pole: String
+
+//ARC check swift.org
+class Person2 {
+    let name: String
+    init(name: String) {
+        self.name = name
+        print("\(name) is being initialized")
+    }
+    deinit {
+        print("\(name) is being deinitialized")
+    }
+}
+
+var reference1: Person2?
+var reference2: Person2?
+var reference3: Person2?
+
+reference1 = Person2(name: "John Appleseed")
+// Prints "John Appleseed is being initialized"
+
+reference2 = reference1
+reference3 = reference1
+
+reference1 = nil
+reference2 = nil
+
+reference3 = nil
+// Prints "John Appleseed is being deinitialized"
