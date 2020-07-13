@@ -33,20 +33,36 @@ class ViewController: UIViewController {
   var result: Double = 0
   var temp: Double = 0
   var output = ""
-  var orrageMathArray = ["plus", "minus", "multiply", "divide"]
+  var orrageMathArray = [" + ", " - ", " x ", " / "]
   var currentOAction = ""
+  var dotBool = false
+  var dotDivider: Double = 10
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     clearOutlet.layer.cornerRadius = 43
     plusMinusOutlet.layer.cornerRadius = 43
+    let plusMinusImage = UIImage(systemName: "plusminus")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+    plusMinusOutlet.setImage(plusMinusImage, for: .normal)
     percentOutlet.layer.cornerRadius = 43
+    let percentImage = UIImage(systemName: "percent")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+    percentOutlet.setImage(percentImage, for: .normal)
     divideOutlet.layer.cornerRadius = 43
+    let divideImage = UIImage(systemName: "divide")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+    divideOutlet.setImage(divideImage, for: .normal)
     multiplyOutlet.layer.cornerRadius = 43
+    let multiplyImage = UIImage(systemName: "multiply")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+    multiplyOutlet.setImage(multiplyImage, for: .normal)
     subtractOutlet.layer.cornerRadius = 43
+    let minusImage = UIImage(systemName: "minus")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+    subtractOutlet.setImage(minusImage, for: .normal)
     addOutlet.layer.cornerRadius = 43
+    let addImage = UIImage(systemName: "plus")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+    addOutlet.setImage(addImage, for: .normal)
     equalOutlet.layer.cornerRadius = 43
+    let equalImage = UIImage(systemName: "equal")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+    equalOutlet.setImage(equalImage, for: .normal)
     dotOutlet.layer.cornerRadius = 43
     zeroOutlet.layer.cornerRadius = 43
     oneOutlet.layer.cornerRadius = 43
@@ -61,46 +77,25 @@ class ViewController: UIViewController {
   }
 
   @IBAction func numbersAction(_ sender: UIButton) {
-    if sender.tag == 0 {
-      result = ( result * 10 ) + 0
-      output += "0"
+    useToCreateNumber (senderTag: sender.tag)
+    resultLabel.text = output
+  }
+  
+  func useToCreateNumber (senderTag: Int) {
+    let dSenderTag = Double(senderTag)
+    if dotBool {
+      result = result + (dSenderTag / dotDivider)
+      dotDivider *= 10
+    } else {
+      result = ( result * 10 ) + dSenderTag
     }
-    if sender.tag == 1 {
-      result = ( result * 10 ) + 1
-      output += "1"
-    }
-    if sender.tag == 2 {
-      result = ( result * 10 ) + 2
-      output += "2"
-    }
-    if sender.tag == 3 {
-      result = ( result * 10 ) + 3
-      output += "3"
-    }
-    if sender.tag == 4 {
-      result = ( result * 10 ) + 4
-      output += "4"
-    }
-    if sender.tag == 5 {
-      result = ( result * 10 ) + 5
-      output += "5"
-    }
-    if sender.tag == 6 {
-      result = ( result * 10 ) + 6
-      output += "6"
-    }
-    if sender.tag == 7 {
-      result = ( result * 10 ) + 7
-      output += "7"
-    }
-    if sender.tag == 8 {
-      result = ( result * 10 ) + 8
-      output += "8"
-    }
-    if sender.tag == 9 {
-     result = ( result * 10 ) + 9
-      output += "9"
-    }
+    output += "\(senderTag)"
+  }
+  
+  @IBAction func dotAction(_ sender: UIButton) {
+    dotBool = true
+    dotDivider = 10
+    output += "."
     resultLabel.text = output
   }
   
@@ -121,77 +116,57 @@ class ViewController: UIViewController {
       result = 0
       resultLabel.text = output
     }
+    dotBool = false
   }
   
   
   @IBAction func orangeBtnsAction(_ sender: UIButton) {
-    
     if sender.tag == 0 {
       equalFunction()
     }
-    
-    if sender.tag == 1 {
-      if currentOAction != "" {
-        equalFunction()
-      }
-      currentOAction = orrageMathArray[0]
-      temp = result
-      result = 0
-      output += " + "
-      resultLabel.text = output
+    if sender.tag > 0 {
+      useToCreateMath(senderTag: sender.tag)
     }
-    
-    if sender.tag == 2 {
-      if currentOAction != "" {
+    dotBool = false
+  }
+  
+  func useToCreateMath(senderTag: Int) {
+    if currentOAction != "" || result == 0 {
+//      if result == 0  {
         equalFunction()
-      }
-      currentOAction = orrageMathArray[1]
+//      } else if result != 0 {
+//        output.removeLast()
+//      }
+    } else {
       temp = result
-      result = 0
-      output += " - "
-      resultLabel.text = output
     }
-    
-    if sender.tag == 3 {
-      if currentOAction != "" {
-        equalFunction()
-      }
-      currentOAction = orrageMathArray[2]
-      temp = result
-      result = 0
-      output += " x "
-      resultLabel.text = output
-    }
-    
-    if sender.tag == 4 {
-      if currentOAction != "" {
-        equalFunction()
-      }
-      currentOAction = orrageMathArray[3]
-      temp = result
-      result = 0
-      output += " / "
-      resultLabel.text = output
-    }
-    
+    currentOAction = orrageMathArray[senderTag-1]
+    result = 0
+    output = "\(temp)" + currentOAction
+    resultLabel.text = output
   }
   
   func equalFunction() {
-    if currentOAction == orrageMathArray[0] {
-      result = temp + result
+    if currentOAction != "" {
+      if currentOAction == orrageMathArray[0] {
+        temp = temp + result
+      }
+      if currentOAction == orrageMathArray[1] {
+        temp = temp - result
+      }
+      if currentOAction == orrageMathArray[2] {
+        temp = temp * result
+      }
+      if currentOAction == orrageMathArray[3] {
+        temp = temp / result
+      }
+      currentOAction = ""
+      output = "\(temp)"
+      result = 0
+      resultLabel.text = output
+      output = ""
+      dotBool = false
     }
-    if currentOAction == orrageMathArray[1] {
-      result = temp - result
-    }
-    if currentOAction == orrageMathArray[2] {
-      result = temp * result
-    }
-    if currentOAction == orrageMathArray[3] {
-      result = temp / result
-    }
-    currentOAction = ""
-    output = "\(result)"
-    resultLabel.text = output
   }
   
 }

@@ -13,7 +13,28 @@ class ViewController: UIViewController {
   var obj1: String?
   
   @objc func btnClicked() {
+    var isOn = true
+    isOn.toggle()
+    isOn = !isOn
     
+    var array = [1, 2, 3, 4]
+    array.shuffle()
+    print(array)
+    
+    let array2 = [1, 2, 3, 4]
+    let shuffledArray = array2.shuffled()
+    print(shuffledArray, array)
+    
+    let toCheckAllSatisfyArr = ["amit","amitmumar"]
+    toCheckAllSatisfyArr.allSatisfy{ (str) -> Bool in
+      return str.count > 0
+    }
+    
+    let array3 = [1,3,5,7]
+    let randomNumber1 = array3.randomElement()
+    
+    #warning("Need to implement in next sprint")
+   // #error("I will not let you compile if you dont complete this")
   }
   
   @objc func openLoginAction() {
@@ -57,7 +78,27 @@ class ViewController: UIViewController {
     mapEx()
     compactMapEx()
     flatMapEx()
+    
+    ["name": "alok", "hobby": "teach"]
+    
+    enum info: CaseIterable {
+      case name
+      case hobby
+    }
   
+    var mInfo = [info: String]()
+    
+    for i in info.allCases {
+      switch i {
+      case .hobby:
+          mInfo[.hobby] = "teaching"
+      case .name:
+           mInfo[.name] = "alok"
+      }
+    }
+    
+    
+    
     let p1 = Person2.init(name: "Jerry")
     let p2 = Person2.init(name: "Chen")
     let p3 = Person2.init(name: "Nurlybek")
@@ -140,6 +181,31 @@ class ViewController: UIViewController {
   
   @IBAction func doSomething4(_ sender: UIButton) {
   }
+  
+  @IBAction func sliderChange(_ sender: UISlider) {
+    view.alpha = CGFloat(sender.value)
+  }
+  
+  
+  @IBAction func segmentChange(_ sender: UISegmentedControl) {
+    sender.selectedSegmentIndex == 0 ? "" :  " "
+    print(sender)
+    if sender.selectedSegmentIndex == 1 {
+        view.backgroundColor = UIColor.brown
+    }else{
+        view.backgroundColor = UIColor.yellow
+
+    }
+  }
+  
+  @IBAction func presentModule(_ sender: UIButton) {
+    let st = UIStoryboard.init(name: "LoginModule", bundle: nil)
+    let vc = st.instantiateViewController(identifier: "LoginViewController")
+    present(vc, animated: true) {
+      print("Just Finished")
+    }
+  }
+  
   
   func doSomething(theTag: Int) {
     

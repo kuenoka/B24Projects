@@ -20,7 +20,12 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+  
+  @IBAction func dismissModule(_ sender: UIButton) {
+    self.dismiss(animated: true) { print("finally dismissed")
+    }
+  }
+  
   @IBAction func btnLoginClicked(_ sender: Any) {
     let username = usernameTextField.text
     let password = passwordTextField.text

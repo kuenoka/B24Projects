@@ -9,12 +9,19 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDelegate {
 
-
+  var navigationControllerInstance: UINavigationController?
+  
+//  func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+//    <#code#>
+//  }
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    let navigationController = application.windows.first?.rootViewController as? UINavigationController
+    navigationControllerInstance = navigationController
+    navigationControllerInstance?.delegate = self
     return true
   }
 
