@@ -24,6 +24,8 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
+//    let v = TestView.init(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+//    view.addSubview(v)
     print(yConstraintBtnTop.constant)
     testView.mainLabel.text = "sup sup sup"
   }

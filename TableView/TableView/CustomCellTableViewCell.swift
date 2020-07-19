@@ -15,7 +15,14 @@ protocol CustomeCellTableViewProtocol {
 class CustomCellTableViewCell: UITableViewCell {
 
   var delegate: CustomeCellTableViewProtocol?
-  var closure: (()->())?
+  
+  var closure: ((Int)->(Bool))?
+  
+  var closure1: (()->())?
+
+  var closure2: (()->(Bool))?
+  var closure3: ((Int)->())?
+
   
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +39,9 @@ class CustomCellTableViewCell: UITableViewCell {
   
   @IBAction func buttonClicked(_ sender: UIButton) {
     //closure?()
+    let res = closure?(sender.tag)
+    let res1 = closure1?()
+    print(res, res1)
     delegate?.btnTapped()
   }
   

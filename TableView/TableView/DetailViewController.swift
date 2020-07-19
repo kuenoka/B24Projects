@@ -8,9 +8,18 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1
+  }
   
-
+  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    return dataSource.count
+  }
+  
+  
+  @IBOutlet weak var myPicker: UIPickerView!
+  
   @IBOutlet weak var lblDetail: UILabel!
   
   @IBOutlet weak var dtblView: UITableView!
@@ -24,7 +33,21 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
       lblDetail.text = infoToBeReceived
       dtblView.dataSource = self
+      myPicker.delegate = self
+      myPicker.dataSource = self
     }
+  
+  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    return dataSource[row]
+  }
+  
+//  func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+//    <#code#>
+//  }
+  
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    print("row: \(row), component: \(component)")
+  }
     
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     dataSource.count
