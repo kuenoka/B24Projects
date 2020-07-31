@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>243850665555-v8aa92o6b37l7pe7enblqia3iiva24rm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.243850665555-v8aa92o6b37l7pe7enblqia3iiva24rm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBufxFie10yS4iSSFxTyw3ZJsbKxrDPK3k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>243850665555</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.batchkingsley.firebase</string>
+	<key>PROJECT_ID</key>
+	<string>b24projectkingsley</string>
+	<key>STORAGE_BUCKET</key>
+	<string>b24projectkingsley.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:243850665555:ios:69f0d3e82ee7457511f0a6</string>
+	<key>DATABASE_URL</key>
+	<string>https://b24projectkingsley.firebaseio.com</string>
+</dict>
+</plist>
