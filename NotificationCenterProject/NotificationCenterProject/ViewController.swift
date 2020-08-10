@@ -14,25 +14,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   @IBOutlet weak var tblView: UITableView!
   var myPlist = [String]()
   
-  @objc func receivedNotif(i:Notification) {
-    print("received")
-    print(i.userInfo?["kinfo"])
-  }
-  
-  @objc func refresh_News_Or_Stocks_Or_Feed_UserJustEnteredForeground() {
-    print("received")
-  }
+//  @objc func receivedNotif(i:Notification) {
+//    print("received")
+//    print(i.userInfo?["kinfo"])
+//  }
+//
+//  @objc func refresh_News_Or_Stocks_Or_Feed_UserJustEnteredForeground() {
+//    print("received")
+//  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
-    NotificationCenter.default.addObserver(self, selector: #selector(receivedNotif), name: NSNotification.Name("anotification"), object: nil)
+//    NotificationCenter.default.addObserver(self, selector: #selector(receivedNotif), name: NSNotification.Name("anotification"), object: nil)
     
     NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "anotification"), object: nil, queue: nil) { (i) in
       print(i.userInfo?["kinfo"])
     }
     
-    NotificationCenter.default.addObserver(self, selector: #selector(refresh_News_Or_Stocks_Or_Feed_UserJustEnteredForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+//    NotificationCenter.default.addObserver(self, selector: #selector(refresh_News_Or_Stocks_Or_Feed_UserJustEnteredForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
     
     tblView.dataSource = self
     tblView.delegate = self
@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     guard let p = Bundle.main.path(forResource: "some", ofType: "plist", inDirectory: nil) else { return }
     
     let res = NSDictionary.init(contentsOfFile: p)
-    print(res)
+    //print(res)
     
     
     let url = Bundle.main.url(forResource: "some1", withExtension: "plist")!
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       if let mp = res {
         let plist = mp as? [String]
         myPlist = plist ?? [String]()
-        print(myPlist)
+        //print(myPlist)
       }
 
     } catch {

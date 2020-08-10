@@ -86,5 +86,26 @@ class ViewController: UIViewController {
   }
 
 
+  
+  
+  /****** Unit Testing ****************************************************/
+  //code coupling?
+  
+  func myFunction() {
+    //username.text = "Hi Amit"
+    makeProductFetch(prod: 0)
+    //APIHandler.fetchProducts() {
+      //DataManager.shared.saveProducts()
+  //}
+  }
+  
+  func makeProductFetch(prod: Int) {
+    //URLSession.. //https: security token
+    saveProds()
+  }
+  
+  func saveProds(){
+    
+  }
 }
 

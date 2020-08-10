@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
   @IBAction func pickImage(_ sender: UITapGestureRecognizer) {
     
      //if UIImagePickerController.isSourceTypeAvailable(.camera){ }
-     imgpickimgController = UIImagePickerController.init()
+    imgpickimgController = UIImagePickerController.init()
     imgpickimgController?.sourceType = .photoLibrary
     imgpickimgController?.delegate = self
     if let obj = imgpickimgController {
