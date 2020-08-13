@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>539987507665-gcm1gh2mk8u7spb79749be7enmghddtj.apps.googleusercontent.com</string>
+	<string>80581549431-uds7kd5q91fesca4ks9q3tscksgbfk33.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.539987507665-gcm1gh2mk8u7spb79749be7enmghddtj</string>
+	<string>com.googleusercontent.apps.80581549431-uds7kd5q91fesca4ks9q3tscksgbfk33</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB-SbYouUXRxeGgsqAotNaN9g3r72i6MUQ</string>
+	<string>AIzaSyAYqUckSu8E3jchhOXKUr8RNI1pAKYPhqM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>539987507665</string>
+	<string>80581549431</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.kingsleyenoka.firegram</string>
+	<string>com.kingsleyenoka.fireinsta</string>
 	<key>PROJECT_ID</key>
-	<string>kingsleyfiregram</string>
+	<string>firegramkingsley</string>
 	<key>STORAGE_BUCKET</key>
-	<string>kingsleyfiregram.appspot.com</string>
+	<string>firegramkingsley.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:539987507665:ios:97adfc456774c86f5488f0</string>
+	<string>1:80581549431:ios:e5708f4c0a9da0cccf5572</string>
 	<key>DATABASE_URL</key>
-	<string>https://kingsleyfiregram.firebaseio.com</string>
+	<string>https://firegramkingsley.firebaseio.com</string>
 </dict>
 </plist>

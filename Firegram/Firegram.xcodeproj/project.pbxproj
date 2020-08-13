@@ -15,7 +15,7 @@
 		B3208FD124E06FAB001A817D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3208FD024E06FAB001A817D /* Assets.xcassets */; };
 		B3208FD424E06FAB001A817D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3208FD224E06FAB001A817D /* LaunchScreen.storyboard */; };
 		B3208FDF24E06FAB001A817D /* FiregramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3208FDE24E06FAB001A817D /* FiregramTests.swift */; };
-		B3208FEA24E073EA001A817D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3208FE924E073EA001A817D /* GoogleService-Info.plist */; };
+		B32A5ADD24E4854400CB24E9 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A5ADC24E4854400CB24E9 /* Like.swift */; };
 		B38DC39224E0AFF000906752 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DC39124E0AFF000906752 /* ProfileViewController.swift */; };
 		B38DC39424E0B35D00906752 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DC39324E0B35D00906752 /* ProfileManager.swift */; };
 		B38DC39624E0D23D00906752 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DC39524E0D23D00906752 /* EditProfileViewController.swift */; };
@@ -31,7 +31,10 @@
 		B38DC3AC24E16C5000906752 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DC3AB24E16C4F00906752 /* SearchTableViewCell.swift */; };
 		B38DC3AE24E1747300906752 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DC3AD24E1747200906752 /* FeedManager.swift */; };
 		B38DC3B024E181EC00906752 /* Following.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DC3AF24E181EC00906752 /* Following.swift */; };
-		B38DC3B224E18DA400906752 /* IDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DC3B124E18DA400906752 /* IDManager.swift */; };
+		B38DC3B724E1CF0B00906752 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B38DC3B624E1CF0B00906752 /* GoogleService-Info.plist */; };
+		B3FBA68924E594CE002A8D93 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA68824E594CE002A8D93 /* CommentViewController.swift */; };
+		B3FBA68B24E5958A002A8D93 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA68A24E5958A002A8D93 /* Comment.swift */; };
+		B3FBA6BB24E5A83D002A8D93 /* CommentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA6BA24E5A83D002A8D93 /* CommentManager.swift */; };
 		B7BF254450B8467764C660CC /* Pods_FiregramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277BBE41D8BE42D0D1F82BCB /* Pods_FiregramTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +66,7 @@
 		B3208FDA24E06FAB001A817D /* FiregramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiregramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3208FDE24E06FAB001A817D /* FiregramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiregramTests.swift; sourceTree = "<group>"; };
 		B3208FE024E06FAB001A817D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3208FE924E073EA001A817D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B32A5ADC24E4854400CB24E9 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		B38DC39124E0AFF000906752 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B38DC39324E0B35D00906752 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		B38DC39524E0D23D00906752 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +82,10 @@
 		B38DC3AB24E16C4F00906752 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B38DC3AD24E1747200906752 /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		B38DC3AF24E181EC00906752 /* Following.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Following.swift; sourceTree = "<group>"; };
-		B38DC3B124E18DA400906752 /* IDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDManager.swift; sourceTree = "<group>"; };
+		B38DC3B624E1CF0B00906752 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B3FBA68824E594CE002A8D93 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		B3FBA68A24E5958A002A8D93 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		B3FBA6BA24E5A83D002A8D93 /* CommentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,28 +142,14 @@
 			children = (
 				B3208FC724E06FA8001A817D /* AppDelegate.swift */,
 				B3208FC924E06FA8001A817D /* SceneDelegate.swift */,
-				B38DC39724E0DAB900906752 /* Profile.swift */,
-				B38DC39D24E10D8500906752 /* Post.swift */,
-				B38DC3AF24E181EC00906752 /* Following.swift */,
-				B38DC39324E0B35D00906752 /* ProfileManager.swift */,
-				B38DC3A324E143C700906752 /* PostManager.swift */,
-				B38DC3AD24E1747200906752 /* FeedManager.swift */,
-				B38DC3A924E1627100906752 /* SearchManager.swift */,
-				B3208FCB24E06FA8001A817D /* ViewController.swift */,
-				B38DC39124E0AFF000906752 /* ProfileViewController.swift */,
-				B38DC3A724E15DE600906752 /* ProfileCollectionViewCell.swift */,
-				B38DC39524E0D23D00906752 /* EditProfileViewController.swift */,
-				B38DC39F24E126EB00906752 /* FeedViewController.swift */,
-				B38DC3A524E14E2300906752 /* FeedTableViewCell.swift */,
-				B38DC3A124E141FB00906752 /* PostViewController.swift */,
-				B38DC39B24E10A8800906752 /* SearchViewController.swift */,
-				B38DC3AB24E16C4F00906752 /* SearchTableViewCell.swift */,
+				B38DC3B324E1C7CE00906752 /* Models */,
+				B38DC3B424E1C80D00906752 /* Managers */,
+				B38DC3B524E1C83600906752 /* Views */,
 				B3208FCD24E06FA8001A817D /* Main.storyboard */,
 				B3208FD024E06FAB001A817D /* Assets.xcassets */,
 				B3208FD224E06FAB001A817D /* LaunchScreen.storyboard */,
-				B3208FE924E073EA001A817D /* GoogleService-Info.plist */,
+				B38DC3B624E1CF0B00906752 /* GoogleService-Info.plist */,
 				B3208FD524E06FAB001A817D /* Info.plist */,
-				B38DC3B124E18DA400906752 /* IDManager.swift */,
 			);
 			path = Firegram;
 			sourceTree = "<group>";
@@ -169,6 +161,47 @@
 				B3208FE024E06FAB001A817D /* Info.plist */,
 			);
 			path = FiregramTests;
+			sourceTree = "<group>";
+		};
+		B38DC3B324E1C7CE00906752 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B38DC39724E0DAB900906752 /* Profile.swift */,
+				B38DC39D24E10D8500906752 /* Post.swift */,
+				B38DC3AF24E181EC00906752 /* Following.swift */,
+				B32A5ADC24E4854400CB24E9 /* Like.swift */,
+				B3FBA68A24E5958A002A8D93 /* Comment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B38DC3B424E1C80D00906752 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B38DC39324E0B35D00906752 /* ProfileManager.swift */,
+				B38DC3A324E143C700906752 /* PostManager.swift */,
+				B38DC3AD24E1747200906752 /* FeedManager.swift */,
+				B38DC3A924E1627100906752 /* SearchManager.swift */,
+				B3FBA6BA24E5A83D002A8D93 /* CommentManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B38DC3B524E1C83600906752 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3208FCB24E06FA8001A817D /* ViewController.swift */,
+				B38DC39124E0AFF000906752 /* ProfileViewController.swift */,
+				B38DC3A724E15DE600906752 /* ProfileCollectionViewCell.swift */,
+				B38DC39524E0D23D00906752 /* EditProfileViewController.swift */,
+				B38DC39F24E126EB00906752 /* FeedViewController.swift */,
+				B38DC3A524E14E2300906752 /* FeedTableViewCell.swift */,
+				B38DC3A124E141FB00906752 /* PostViewController.swift */,
+				B3FBA68824E594CE002A8D93 /* CommentViewController.swift */,
+				B38DC39B24E10A8800906752 /* SearchViewController.swift */,
+				B38DC3AB24E16C4F00906752 /* SearchTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CBA7991AF258890474240545 /* Pods */ = {
@@ -268,7 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3208FD424E06FAB001A817D /* LaunchScreen.storyboard in Resources */,
-				B3208FEA24E073EA001A817D /* GoogleService-Info.plist in Resources */,
+				B38DC3B724E1CF0B00906752 /* GoogleService-Info.plist in Resources */,
 				B3208FD124E06FAB001A817D /* Assets.xcassets in Resources */,
 				B3208FCF24E06FA8001A817D /* Main.storyboard in Resources */,
 			);
@@ -369,6 +402,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FBA68924E594CE002A8D93 /* CommentViewController.swift in Sources */,
+				B3FBA6BB24E5A83D002A8D93 /* CommentManager.swift in Sources */,
 				B3208FCC24E06FA8001A817D /* ViewController.swift in Sources */,
 				B38DC3B024E181EC00906752 /* Following.swift in Sources */,
 				B38DC39424E0B35D00906752 /* ProfileManager.swift in Sources */,
@@ -378,13 +413,14 @@
 				B38DC3A624E14E2300906752 /* FeedTableViewCell.swift in Sources */,
 				B38DC3A424E143C700906752 /* PostManager.swift in Sources */,
 				B38DC39824E0DAB900906752 /* Profile.swift in Sources */,
-				B38DC3B224E18DA400906752 /* IDManager.swift in Sources */,
+				B3FBA68B24E5958A002A8D93 /* Comment.swift in Sources */,
 				B3208FC824E06FA8001A817D /* AppDelegate.swift in Sources */,
 				B38DC3AE24E1747300906752 /* FeedManager.swift in Sources */,
 				B38DC39E24E10D8500906752 /* Post.swift in Sources */,
 				B38DC3A824E15DE600906752 /* ProfileCollectionViewCell.swift in Sources */,
 				B38DC39224E0AFF000906752 /* ProfileViewController.swift in Sources */,
 				B38DC3AA24E1627100906752 /* SearchManager.swift in Sources */,
+				B32A5ADD24E4854400CB24E9 /* Like.swift in Sources */,
 				B38DC3AC24E16C5000906752 /* SearchTableViewCell.swift in Sources */,
 				B3208FCA24E06FA8001A817D /* SceneDelegate.swift in Sources */,
 				B38DC3A224E141FB00906752 /* PostViewController.swift in Sources */,
@@ -554,7 +590,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kingsleyenoka.firegram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kingsleyenoka.fireinsta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -572,7 +608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kingsleyenoka.firegram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kingsleyenoka.fireinsta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -19,8 +19,17 @@ class MessagesViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     tblView.dataSource = self
+    addTitle()
     MessageManager.shared.setID(id: friend.messageID)
     setup()
+  }
+  
+  func addTitle() {
+    let title = UILabel()
+    title.text = "Messages"
+    title.textColor = .red
+    title.textAlignment = .center
+    navigationItem.titleView = title
   }
   
   @IBAction func sendMessage(_ sender: UIButton) {
