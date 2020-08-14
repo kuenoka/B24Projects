@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController {
   @IBOutlet weak var followers: UILabel!
   @IBOutlet weak var following: UILabel!
   @IBOutlet weak var posts: UILabel!
-  @IBOutlet weak var clkView: UICollectionView!
+  @IBOutlet weak var tblView: UITableView!
   @IBOutlet weak var profileImageView: UIImageView!
   
   var profile: Profile!
@@ -25,8 +25,7 @@ class ProfileViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     profileImageView.layer.cornerRadius = profileImageView.frame.height/2
-    clkView.dataSource = self
-    clkView.delegate = self
+    tblView.dataSource = self
     addProfileTitle()
     signOut()
     editProfile()
@@ -41,6 +40,17 @@ class ProfileViewController: UIViewController {
 //      self.clkView.reloadData()
 //    }
 //  }
+  
+  
+  @IBAction func likeByAction(_ sender: UITapGestureRecognizer) {
+    print("")
+    print("")
+    print("")
+    print("liked by tapped")
+    print("")
+    print("")
+    print("")
+  }
   
   func updateProfile(completion: @escaping (Bool) -> Void) {
     let alert = UIAlertController(title: "Update Profile", message: "Whats your first and last name?", preferredStyle: .alert)
@@ -80,7 +90,7 @@ class ProfileViewController: UIViewController {
     PostManager.shared.getPosts { (data) in
       self.postArray = data
       self.posts.text = "Posts: \(self.postArray.count)"
-      self.clkView.reloadData()
+      self.tblView.reloadData()
     }
   }
   
@@ -135,33 +145,26 @@ class ProfileViewController: UIViewController {
   
 }
 
-extension ProfileViewController: UICollectionViewDataSource {
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    postArray.count
+extension ProfileViewController: UITableViewDataSource, CommentDelegate {
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return postArray.count
   }
   
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ProfileCollectionViewCell
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ProfileTableViewCell
     cell.post = postArray[indexPath.row]
+    cell.likedByLbl.text = "Liked By \(postArray[indexPath.row].likes)"
+    cell.delegate = self
     cell.getPost()
     return cell
   }
   
-}
-
-extension ProfileViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/3 , height: collectionView.frame.height/4)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
-    }
+  func moveToCommentViewController() {
+    let sb = UIStoryboard(name: "Main", bundle: nil)
+    let vc = sb.instantiateViewController(identifier: "CommentViewController")
+    navigationController?.pushViewController(vc, animated: true)
+  }
 }
 
 extension ProfileViewController: EditProfileDelegate {

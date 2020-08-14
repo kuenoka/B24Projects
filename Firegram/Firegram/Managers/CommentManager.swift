@@ -35,7 +35,6 @@ class CommentManager {
   private func arrangeData(postDictionary: [String: AnyObject]) {
     comments = []
     for commentUnit in postDictionary.values {
-      print(commentUnit)
       if let comment = commentUnit["comment"], let senderusername = commentUnit["senderusername"], let senderID = commentUnit["senderID"], let commentID = commentUnit["commentID"], let date = commentUnit["date"] {
         let newComment = Comment(comment: comment as! String, senderusernmae: senderusername as! String, senderID: senderID as! String, commentID: commentID as! String, date: date as! String)
         comments.append(newComment)
